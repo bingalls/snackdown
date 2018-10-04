@@ -30,7 +30,7 @@ class TagsController extends Controller
         $input = Request::all();
         if (array_key_exists('value', $input)) {
             // use the video ID for each tag type
-            $tag = Tag::findOrCreate($input['value'], array_get($input, 'id'));
+            $tag = Tag::findOrCreate($input['value'], array_get($input,'id'));
             $fileUpload = new FileUpload();
             $upload = $fileUpload->find(array_get($input, 'id'));
             $upload->attachTag($tag);

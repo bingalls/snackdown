@@ -54,4 +54,5 @@ class Upload
         }
         return ['filename' => '', 'msg' => 'Unexpected upload failure'];
     }
+
 }

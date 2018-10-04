@@ -7,16 +7,18 @@ window.swal = require('sweetalert2');
 import Popper from 'popper.js/dist/umd/popper.js';
 
 /**
- * Font Awesome 5
+ * Font Awesome >=5.1
+ *
+ * Is recommended import just the icons that you use, for decrease considerably the file size.
+ * You can see at next link, how it works: https://github.com/FortAwesome/Font-Awesome/blob/master/UPGRADING.md#no-more-default-imports
+ * Also you can import the icons separately on the frontend and backend
  */
-import fontawesome from '@fortawesome/fontawesome';
-import solid from '@fortawesome/fontawesome-free-solid';
-import regular from '@fortawesome/fontawesome-free-regular';
-import brands from '@fortawesome/fontawesome-free-brands';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
-fontawesome.library.add(solid);
-fontawesome.library.add(regular);
-fontawesome.library.add(brands);
+library.add(fab, far, fas);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support

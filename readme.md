@@ -16,13 +16,13 @@ Linux or Vagrant can also keep you from cursing in the locker room.
 * [git clone snackdown](https://github.com/bingalls/snackdown)
 * `cd snackdown/`
 * `composer install`
-* `yarn`      # or `npm install`
+* `npm install`  # or `yarn`
 * `cp .env.example .env` # and edit
-* create empty database matching .env's DB_*
+* create empty database using DB_* settings in .env
 * `php artisan key:generate`
 * `php artisan migrate`
 * `php artisan db:seed`
-* `yarn run development`
+* `npm run development`   # or yarn
 * `php artisan storage:link`
 * Check path to ffprobe in config/laravel-ffmpeg.php
 
@@ -32,8 +32,11 @@ Run these tests, if you ever notice trouble.
 * `composer validate`
 * `composer phpunit`
 * `composer coverage-text`
-* `yarn check`        # just accept typical errors in vendor libs :(
-* `yarn run test`
+* `npm audit`
+* `npm doctor`
+* `yarn check`        # if available; just accept typical errors in vendor libs :(
+* # Ensure _testURL_ in package.json is correct
+* `npm run test`
 * `phpcs --standard=PSR2 -n app`  # Better: edit PSR2, lineLength in ruleset.xml
 * `php artisan sniff -n`
 * `eslint resources/`
